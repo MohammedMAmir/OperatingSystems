@@ -1,0 +1,682 @@
+Start testing: Nov 18 20:58 EST
+----------------------------------------------------------
+1/25 Testing: EmptyTest
+1/25 Test: EmptyTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/empty_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"EmptyTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"EmptyTest" end time: Nov 18 20:58 EST
+"EmptyTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/25 Testing: ExitFalseTest
+2/25 Test: ExitFalseTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/exit_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--test" "f"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ExitFalseTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"ExitFalseTest" end time: Nov 18 20:58 EST
+"ExitFalseTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/25 Testing: ExitInvalidTest
+3/25 Test: ExitInvalidTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/exit_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--test" "i"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ExitInvalidTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Passed.
+"ExitInvalidTest" end time: Nov 18 20:58 EST
+"ExitInvalidTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/25 Testing: ExitFalseInvalidTest
+4/25 Test: ExitFalseInvalidTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/exit_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--test" "fi"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ExitFalseInvalidTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"ExitFalseInvalidTest" end time: Nov 18 20:58 EST
+"ExitFalseInvalidTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/25 Testing: ExitInvalidFalseTest
+5/25 Test: ExitInvalidFalseTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/exit_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--test" "if"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ExitInvalidFalseTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"ExitInvalidFalseTest" end time: Nov 18 20:58 EST
+"ExitInvalidFalseTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/25 Testing: ChildrenOneTest
+6/25 Test: ChildrenOneTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "1"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenOneTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.40 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenOneTest" end time: Nov 18 20:58 EST
+"ChildrenOneTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/25 Testing: ChildrenTwoTest
+7/25 Test: ChildrenTwoTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "2"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenTwoTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenTwoTest" end time: Nov 18 20:58 EST
+"ChildrenTwoTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/25 Testing: ChildrenThreeTest
+8/25 Test: ChildrenThreeTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "3"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenThreeTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenThreeTest" end time: Nov 18 20:58 EST
+"ChildrenThreeTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/25 Testing: ChildrenFourTest
+9/25 Test: ChildrenFourTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "4"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenFourTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.42 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenFourTest" end time: Nov 18 20:58 EST
+"ChildrenFourTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/25 Testing: ChildrenFiveTest
+10/25 Test: ChildrenFiveTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "5"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenFiveTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.52 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenFiveTest" end time: Nov 18 20:58 EST
+"ChildrenFiveTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/25 Testing: ChildrenSixTest
+11/25 Test: ChildrenSixTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "6"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenSixTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenSixTest" end time: Nov 18 20:58 EST
+"ChildrenSixTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/25 Testing: ChildrenSevenTest
+12/25 Test: ChildrenSevenTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "7"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenSevenTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenSevenTest" end time: Nov 18 20:58 EST
+"ChildrenSevenTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/25 Testing: ChildrenEightTest
+13/25 Test: ChildrenEightTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "8"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenEightTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenEightTest" end time: Nov 18 20:58 EST
+"ChildrenEightTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/25 Testing: ChildrenNineTest
+14/25 Test: ChildrenNineTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "9"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenNineTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenNineTest" end time: Nov 18 20:58 EST
+"ChildrenNineTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/25 Testing: ChildrenTenTest
+15/25 Test: ChildrenTenTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--children" "10"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"ChildrenTenTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 58, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 55, in main
+    children_test(options.executable, options.children)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/children_test.py", line 15, in children_test
+    p = subprocess.run(['strace', '-e', 'clone,wait4', executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['strace', '-e', 'clone,wait4', '/homes/a/amirmoh4/ece344/pipe/build/pipe', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.44 sec
+----------------------------------------------------------
+Test Failed.
+"ChildrenTenTest" end time: Nov 18 20:58 EST
+"ChildrenTenTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/25 Testing: PipeOneTest
+16/25 Test: PipeOneTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "1"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeOneTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Failed.
+"PipeOneTest" end time: Nov 18 20:58 EST
+"PipeOneTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/25 Testing: PipeTwoTest
+17/25 Test: PipeTwoTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "2"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeTwoTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Failed.
+"PipeTwoTest" end time: Nov 18 20:58 EST
+"PipeTwoTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/25 Testing: PipeThreeTest
+18/25 Test: PipeThreeTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "3"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeThreeTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Failed.
+"PipeThreeTest" end time: Nov 18 20:58 EST
+"PipeThreeTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/25 Testing: PipeFourTest
+19/25 Test: PipeFourTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "4"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeFourTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Failed.
+"PipeFourTest" end time: Nov 18 20:58 EST
+"PipeFourTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/25 Testing: PipeFiveTest
+20/25 Test: PipeFiveTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "5"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeFiveTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Failed.
+"PipeFiveTest" end time: Nov 18 20:58 EST
+"PipeFiveTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/25 Testing: PipeSixTest
+21/25 Test: PipeSixTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "6"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeSixTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.56 sec
+----------------------------------------------------------
+Test Failed.
+"PipeSixTest" end time: Nov 18 20:58 EST
+"PipeSixTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/25 Testing: PipeSevenTest
+22/25 Test: PipeSevenTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "7"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeSevenTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.52 sec
+----------------------------------------------------------
+Test Failed.
+"PipeSevenTest" end time: Nov 18 20:58 EST
+"PipeSevenTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/25 Testing: PipeEightTest
+23/25 Test: PipeEightTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "8"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeEightTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Failed.
+"PipeEightTest" end time: Nov 18 20:58 EST
+"PipeEightTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/25 Testing: PipeNineTest
+24/25 Test: PipeNineTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe" "--pipes" "9"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"PipeNineTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 36, in <module>
+    main(sys.argv[1:])
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 33, in main
+    pipe_test(options.executable, options.pipes)
+  File "/homes/a/amirmoh4/ece344/pipe/tests/pipe_test.py", line 16, in pipe_test
+    p = subprocess.run([executable] + args,
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1982, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/homes/a/amirmoh4/ece344/pipe/build/pipe', 'uname', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat', 'cat']' timed out after 0.1 seconds
+<end of output>
+Test time =   0.56 sec
+----------------------------------------------------------
+Test Failed.
+"PipeNineTest" end time: Nov 18 20:58 EST
+"PipeNineTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/25 Testing: StdinTest
+25/25 Test: StdinTest
+Command: "/usr/bin/python3.9" "/homes/a/amirmoh4/ece344/pipe/tests/stdin_test.py" "--executable" "/homes/a/amirmoh4/ece344/pipe/build/pipe"
+Directory: /homes/a/amirmoh4/ece344/pipe/build/tests
+"StdinTest" start time: Nov 18 20:58 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.56 sec
+----------------------------------------------------------
+Test Passed.
+"StdinTest" end time: Nov 18 20:58 EST
+"StdinTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 18 20:58 EST
