@@ -1,0 +1,45 @@
+EmptyTest 52 0.00632818
+ExitFalseTest 52 0.00652279
+ExitInvalidTest 51 0.00772816
+ExitFalseInvalidTest 24 0.0185593
+ExitInvalidFalseTest 11 0.0412251
+ChildrenOneTest 2 0
+ChildrenTwoTest 4 0
+ChildrenThreeTest 1 0
+ChildrenFourTest 0 0
+ChildrenFiveTest 0 0
+ChildrenSixTest 0 0
+ChildrenSevenTest 0 0
+ChildrenEightTest 0 0
+ChildrenNineTest 0 0
+ChildrenTenTest 0 0
+PipeOneTest 23 0
+PipeTwoTest 8 0
+PipeThreeTest 0 0
+PipeFourTest 0 0
+PipeFiveTest 0 0
+PipeSixTest 0 0
+PipeSevenTest 0 0
+PipeEightTest 0 0
+PipeNineTest 0 0
+StdinTest 8 0.0696785
+---
+ChildrenOneTest
+ChildrenTwoTest
+ChildrenThreeTest
+ChildrenFourTest
+ChildrenFiveTest
+ChildrenSixTest
+ChildrenSevenTest
+ChildrenEightTest
+ChildrenNineTest
+ChildrenTenTest
+PipeOneTest
+PipeTwoTest
+PipeThreeTest
+PipeFourTest
+PipeFiveTest
+PipeSixTest
+PipeSevenTest
+PipeEightTest
+PipeNineTest
